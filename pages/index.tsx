@@ -118,8 +118,8 @@ const Home: NextPage = () => {
               </JobExperience>
               <JobExperience company="Pryx Labs " date="Mar 2021 - Jun 2021">
                 <strong>Desarrollador Back-End.</strong>
-                <br /> Primera práctica profesional, cree una API REST para una
-                plataforma de IoT.
+                <br /> Primera práctica profesional, desarrollé una API REST
+                para una plataforma de IoT.
                 <br /> Tecnologías utilizadas: Django, Django REST framework,
                 PostgreSQL.
               </JobExperience>
