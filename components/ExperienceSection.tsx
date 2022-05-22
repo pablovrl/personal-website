@@ -18,6 +18,7 @@ const JobExperience = ({ company, date, children }: JobExperienceProps) => {
     </Flex>
   );
 };
+
 const ExperienceSection = () => {
   return (
     <Box>
