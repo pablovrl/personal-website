@@ -49,13 +49,19 @@ const AboutSection = () => {
             >
               <AiFillLinkedin size="25" />
             </Link>
-            <Button
-              leftIcon={<DownloadIcon />}
-              size={"xs"}
-              colorScheme={"pink"}
+            <Link
+              _hover={{ textDecoration: "none" }}
+              href="pablovillarroelcv.pdf"
+              isExternal
             >
-              Descargar CV
-            </Button>
+              <Button
+                leftIcon={<DownloadIcon />}
+                size={"xs"}
+                colorScheme={"pink"}
+              >
+                Descargar CV
+              </Button>
+            </Link>
           </HStack>
         </Box>
         <Flex justifyContent={"center"} m={4}>
