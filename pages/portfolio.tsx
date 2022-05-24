@@ -19,7 +19,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/pablovrl/personal-website",
     title: "Página Personal",
     description:
-      "Página web personal, en la que se encuentra mi experiencia profesional y proyectos personales.",
+      "Página web personal, en la que encontrarás mi experiencia profesional y proyectos personales.",
   },
   {
     image: "/calculador-promedio.png",
