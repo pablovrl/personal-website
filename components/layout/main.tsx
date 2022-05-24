@@ -2,7 +2,8 @@ import { Box, Container } from "@chakra-ui/react";
 import Head from "next/head";
 import Navbar from "../Navbar";
 import { useColorModeValue } from "@chakra-ui/react";
-const Main = ({ children }: { children: any }) => {
+
+const Main = ({ children }: { children: React.ReactElement }) => {
   return (
     <Box
       as="main"
