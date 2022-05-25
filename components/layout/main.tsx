@@ -13,6 +13,7 @@ const Main = ({ children }: { children: React.ReactElement }) => {
     >
       <Head>
         <title>Pablo Villarroel</title>
+        <link rel="icon" type="image/svg+xml" href="planet.svg" />
       </Head>
       <Navbar />
       <Container maxW={"container.md"} pt={14}>
