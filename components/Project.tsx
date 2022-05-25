@@ -1,16 +1,10 @@
-import {
-  Link,
-  Box,
-  Flex,
-  HStack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Link, Box, Flex, HStack, useColorModeValue } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
 
 interface ProjectProps {
   image: string;
-  pageUrl: string;
+  pageUrl?: string;
   githubUrl: string;
   children?: React.ReactNode;
   iconColor: "white" | "black";
@@ -44,7 +38,7 @@ const Project = ({
       <Box
         border={"2px"}
         borderColor={useColorModeValue("#728D88", "#C06E70")}
-        bgSize={"contain"}
+        bgSize={"cover"}
         bgImage={image}
         rounded="2xl"
       >
@@ -60,9 +54,11 @@ const Project = ({
           }}
         >
           <HStack spacing={8}>
-            <IconLink href={pageUrl}>
-              <BiLinkExternal color={iconColor} size={40} />
-            </IconLink>
+            {pageUrl && (
+              <IconLink href={pageUrl}>
+                <BiLinkExternal color={iconColor} size={40} />
+              </IconLink>
+            )}
             <IconLink href={githubUrl}>
               <AiFillGithub color={iconColor} size={40} />
             </IconLink>

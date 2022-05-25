@@ -4,7 +4,7 @@ import Project from "../components/Project";
 
 interface Project {
   image: string;
-  pageUrl: string;
+  pageUrl?: string;
   githubUrl: string;
   title?: string;
   description?: string;
@@ -30,13 +30,25 @@ const projects: Project[] = [
     description:
       "Una simple aplicación web que calcula el promedio de tus notas.",
   },
+  {
+    image: "/prueba-docmovi.png",
+    iconColor: "black",
+    githubUrl: "https://github.com/pablovrl/prueba-docmovi",
+    title: "Prueba Técnica Docmovi",
+    description:
+      "Prueba técnica para la empresa Docmovi.",
+  },
 ];
 
 const Portfolio: NextPage = () => {
   return (
     <Box pt={8}>
       <SlideFade in>
-        <SimpleGrid mx={{base: 8, md: 14}} gap={8} columns={{ base: 1, md: 2 }}>
+        <SimpleGrid
+          mx={{ base: 8, md: 14 }}
+          gap={8}
+          columns={{ base: 1, md: 2 }}
+        >
           {projects.map((project) => (
             <Project
               key={project.githubUrl}
@@ -48,7 +60,9 @@ const Portfolio: NextPage = () => {
               <Text mt={2} textAlign="center" fontSize={"xl"}>
                 {project.title}
               </Text>
-              <Text fontSize={"sm"} textAlign={"center"}>{project.description}</Text>
+              <Text fontSize={"sm"} textAlign={"center"}>
+                {project.description}
+              </Text>
             </Project>
           ))}
         </SimpleGrid>
