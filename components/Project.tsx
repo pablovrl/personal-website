@@ -1,4 +1,10 @@
-import { Link, Box, Flex, HStack, VStack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Link,
+  Box,
+  Flex,
+  HStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
 
@@ -10,6 +16,22 @@ interface ProjectProps {
   iconColor: "white" | "black";
 }
 
+interface IconLinkProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+const IconLink = ({ href, children }: IconLinkProps) => (
+  <Link href={href} isExternal>
+    <Box
+      _hover={{ transform: "scale(1.2)" }}
+      css={{ transition: "transform 180ms ease-in-out" }}
+    >
+      {children}
+    </Box>
+  </Link>
+);
+
 const Project = ({
   image,
   pageUrl,
@@ -19,7 +41,13 @@ const Project = ({
 }: ProjectProps) => {
   return (
     <Box>
-      <Box border={"2px"} borderColor={useColorModeValue("#728D88", "#C06E70")} bgSize={"contain"} bgImage={image} rounded="2xl">
+      <Box
+        border={"2px"}
+        borderColor={useColorModeValue("#728D88", "#C06E70")}
+        bgSize={"contain"}
+        bgImage={image}
+        rounded="2xl"
+      >
         <Flex
           alignItems={"center"}
           justifyContent={"center"}
@@ -32,22 +60,12 @@ const Project = ({
           }}
         >
           <HStack spacing={8}>
-            <Link href={pageUrl}>
-              <Box
-                _hover={{ transform: "scale(1.2)" }}
-                css={{ transition: "transform 180ms ease-in-out" }}
-              >
-                <BiLinkExternal color={iconColor} size={40} />
-              </Box>
-            </Link>
-            <Link href={githubUrl}>
-              <Box
-                _hover={{ transform: "scale(1.2)" }}
-                css={{ transition: "transform 180ms ease-in-out" }}
-              >
-                <AiFillGithub color={iconColor} size={40} />
-              </Box>
-            </Link>
+            <IconLink href={pageUrl}>
+              <BiLinkExternal color={iconColor} size={40} />
+            </IconLink>
+            <IconLink href={githubUrl}>
+              <AiFillGithub color={iconColor} size={40} />
+            </IconLink>
           </HStack>
         </Flex>
       </Box>
