@@ -40,6 +40,7 @@ const Project = ({
         borderColor={useColorModeValue("#728D88", "#C06E70")}
         bgSize={"cover"}
         bgImage={image}
+        bgPos={"center"}
         rounded="2xl"
       >
         <Flex
