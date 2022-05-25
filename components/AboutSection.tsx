@@ -8,7 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { DownloadIcon } from "@chakra-ui/icons";
 import SubTitle from "./SubTitle";
 
@@ -49,6 +49,9 @@ const AboutSection = () => {
             >
               <AiFillLinkedin size="25" />
             </Link>
+            <Link href="mailto:pablovillarroel135@gmail.com">
+              <AiFillMail size="25" />
+            </Link>
             <Link
               _hover={{ textDecoration: "none" }}
               href="pablovillarroelcv.pdf"
@@ -76,7 +79,7 @@ const AboutSection = () => {
       </Flex>
       <SubTitle>Sobre mi</SubTitle>
       <Text>
-        Hola! actualmente soy estudiante de séptimo semestre de Ingeniería en
+        Hola!, actualmente soy estudiante de séptimo semestre de Ingeniería en
         Informática, a lo largo de mis años en la carrera he estudiado
         desarrollo web de forma autodidacta (y sigo haciéndolo), lo que me ha
         llevado a sentirme cómodo trabajando con{" "}
@@ -88,7 +91,7 @@ const AboutSection = () => {
           React (Next.js)
         </TechnologyLink>{" "}
         y <TechnologyLink href="https://nodejs.org/es/">Node.js</TechnologyLink>
-        .
+        . Me considero bueno resolviendo problemas, y me divierto mucho desarrollando, sobretodo cuando aprendo cosas nuevas :).
       </Text>
     </>
   );
