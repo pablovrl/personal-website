@@ -22,6 +22,15 @@ const projects: Project[] = [
       "Página web personal, en la que encontrarás mi experiencia profesional y proyectos personales.",
   },
   {
+    image: "/pokeapi-card.png",
+    iconColor: "black",
+    pageUrl: "https://pokemon-card-52nkfn6lt-pablovrl.vercel.app",
+    githubUrl: "https://github.com/pablovrl/pokemon-card",
+    title: "Pokemon Card",
+    description:
+      "Página web para ver la información de un Pokémon, utilizando la API de PokeAPI.",
+  },
+  {
     image: "/calculador-promedio.png",
     iconColor: "black",
     pageUrl: "https://calculador-promedio-theta.vercel.app/",
@@ -35,8 +44,7 @@ const projects: Project[] = [
     iconColor: "black",
     githubUrl: "https://github.com/pablovrl/prueba-docmovi",
     title: "Prueba Técnica Docmovi",
-    description:
-      "Prueba técnica para la empresa Docmovi.",
+    description: "Prueba técnica para la empresa Docmovi.",
   },
 ];
 
