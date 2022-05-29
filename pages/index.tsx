@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import AboutSection from "../components/AboutSection";
 import ExperienceSection from "../components/ExperienceSection";
 import EstudiesSection from "../components/EstudiesSection";
+import LenguagesSection from "../components/LenguagesSections";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
         <AboutSection />
         <ExperienceSection />
         <EstudiesSection />
+        <LenguagesSection />
       </SlideFade>
     </Box>
   );
