@@ -24,7 +24,7 @@ const projects: Project[] = [
   {
     image: "/pokeapi-card.png",
     iconColor: "black",
-    pageUrl: "https://pokemon-card-52nkfn6lt-pablovrl.vercel.app",
+    pageUrl: "https://pokemon-card-ten.vercel.app/",
     githubUrl: "https://github.com/pablovrl/pokemon-card",
     title: "Pokemon Card",
     description:
