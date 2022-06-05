@@ -10,6 +10,7 @@ import {
   useColorMode,
   IconButton,
   HStack,
+  Switch,
 } from "@chakra-ui/react";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
@@ -62,12 +63,16 @@ export default function Navbar() {
           </HStack>
         </Box>
         <HStack>
-          <IconButton
-            aria-label={"Toggle theme"}
-            onClick={toggleColorMode}
-            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            colorScheme={useColorModeValue("purple", "orange")}
-          />
+          <HStack>
+            <SunIcon />
+            <Switch
+              size={"lg"}
+              colorScheme="pink"
+              onChange={toggleColorMode}
+              isChecked={colorMode === "dark" ? true : false}
+            />
+            <MoonIcon />
+          </HStack>
           <Box display={{ md: "none" }}>
             <Menu isLazy>
               <MenuButton as={IconButton} icon={<HamburgerIcon />} />
