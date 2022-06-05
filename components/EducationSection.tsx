@@ -1,7 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import SubTitle from "./SubTitle";
 
-const EstudiesSection = () => {
+const EducationSection = () => {
   return (
     <Box>
       <SubTitle>Estudios</SubTitle>
@@ -16,4 +16,4 @@ const EstudiesSection = () => {
   );
 };
 
-export default EstudiesSection;
+export default EducationSection;

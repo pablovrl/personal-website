@@ -3,7 +3,7 @@ import { Box, SlideFade } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import AboutSection from "../components/AboutSection";
 import ExperienceSection from "../components/ExperienceSection";
-import EstudiesSection from "../components/EstudiesSection";
+import EducationSection from "../components/EducationSection";
 import LenguagesSection from "../components/LenguagesSections";
 
 const Home: NextPage = () => {
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <SlideFade in>
         <AboutSection />
         <ExperienceSection />
-        <EstudiesSection />
+        <EducationSection />
         <LenguagesSection />
       </SlideFade>
     </Box>
