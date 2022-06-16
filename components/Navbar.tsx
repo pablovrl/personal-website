@@ -35,6 +35,7 @@ export default function Navbar() {
       position={"fixed"}
       w={"100%"}
       zIndex={1}
+      transition="background 0.2s ease-in-out"
     >
       <Container
         p={2}

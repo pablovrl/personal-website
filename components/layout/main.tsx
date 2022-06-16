@@ -10,6 +10,7 @@ const Main = ({ children }: { children: React.ReactElement }) => {
       pb="8"
       bg={useColorModeValue("#F7E9D7", "#202023")}
       style={{ minHeight: "100vh" }}
+      transition="background 0.2s ease-in-out"
     >
       <Head>
         <title>Pablo Villarroel</title>

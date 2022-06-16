@@ -8,6 +8,9 @@ const theme = extendTheme({
   fonts: {
     body: "DM Sans",
   },
+  config: {
+    disableTransitionOnChange: false,
+  },
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
