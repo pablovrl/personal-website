@@ -1,21 +1,21 @@
 import React from "react";
-import { Box, SlideFade } from "@chakra-ui/react";
+import { Box, SlideFade, VStack } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import AboutSection from "../components/About";
-import ExperienceSection from "../components/Experience";
-import EducationSection from "../components/Education";
-import LenguagesSection from "../components/Lenguages";
+import About from "../components/About";
+import Experience from "../components/Experience";
+import Education from "../components/Education";
+import Lenguages from "../components/Lenguages";
 import Skills from "../components/Skills";
 
 const Home: NextPage = () => {
   return (
     <Box pt={8}>
       <SlideFade in>
-        <AboutSection />
+        <About />
         <Skills />
-        <ExperienceSection />
-        <EducationSection />
-        <LenguagesSection />
+        <Experience />
+        <Education />
+        <Lenguages />
       </SlideFade>
     </Box>
   );
