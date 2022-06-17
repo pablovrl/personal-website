@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, SlideFade } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import AboutSection from "../components/AboutSection";
-import ExperienceSection from "../components/ExperienceSection";
-import EducationSection from "../components/EducationSection";
-import LenguagesSection from "../components/LenguagesSections";
+import AboutSection from "../components/About";
+import ExperienceSection from "../components/Experience";
+import EducationSection from "../components/Education";
+import LenguagesSection from "../components/Lenguages";
 import Skills from "../components/Skills";
 
 const Home: NextPage = () => {
