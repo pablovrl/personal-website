@@ -1,4 +1,4 @@
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, Wrap, WrapItem } from "@chakra-ui/react";
 import SubTitle from "./SubTitle";
 
 const ICON_SIZE = 40;
@@ -9,14 +9,16 @@ interface SkillIconProps {
 }
 
 const SkillIcon = ({ icon, size }: SkillIconProps) => (
-  <i className={icon} style={{ fontSize: size }} />
+  <WrapItem>
+    <i className={icon} style={{ fontSize: size }} />
+  </WrapItem>
 );
 
 const Skills = () => {
   return (
     <Box>
       <SubTitle>Tecnologías</SubTitle>
-      <HStack>
+      <Wrap>
         <SkillIcon icon="devicon-typescript-plain" size={ICON_SIZE} />
         <SkillIcon icon="devicon-react-original" size={ICON_SIZE} />
         <SkillIcon icon="devicon-nodejs-plain" size={ICON_SIZE} />
@@ -27,7 +29,7 @@ const Skills = () => {
         <SkillIcon icon="devicon-docker-plain" size={ICON_SIZE} />
         <SkillIcon icon="devicon-linux-plain" size={ICON_SIZE} />
         <SkillIcon icon="devicon-jest-plain" size={ICON_SIZE} />
-      </HStack>
+      </Wrap>
     </Box>
   );
 };
