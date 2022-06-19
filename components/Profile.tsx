@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Flex,
   Box,
@@ -12,6 +13,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { DownloadIcon } from "@chakra-ui/icons";
 
 const Profile = () => {
+  const [counter, setCounter] = useState(0);
   return (
     <Flex
       flexDirection={{ base: "column", md: "row" }}
@@ -55,11 +57,12 @@ const Profile = () => {
       </Box>
       <Flex justifyContent={"center"} m={4}>
         <Image
-          src="/perfil.jpeg"
+          src={counter < 20 ? "/perfil.jpeg" : "/caballo.png"}
           height="150"
           width="150"
           alt="Perfil image"
-          style={{ border: "red 1px solid", borderRadius: "50%" }}
+          style={{ borderRadius: "50%" }}
+          onClick={() => setCounter(counter + 1)}
         />
       </Flex>
     </Flex>
