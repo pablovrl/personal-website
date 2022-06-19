@@ -42,7 +42,7 @@ const Profile = () => {
           </Link>
           <Link
             _hover={{ textDecoration: "none" }}
-            href="pablovillarroelcv.pdf"
+            href="https://docs.google.com/document/d/1xa9UIY9VXdLW8a-D5NGnUd-NSonwUVlNbnpOmSzTOt4/edit?usp=sharing"
             isExternal
           >
             <Button
