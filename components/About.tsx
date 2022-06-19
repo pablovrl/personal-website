@@ -20,20 +20,16 @@ const AboutSection = () => {
       <Profile />
       <SubTitle>Sobre mi</SubTitle>
       <Text>
-        Hola!, actualmente soy estudiante de séptimo semestre de Ingeniería en
+        Hola!, actualmente soy estudiante de último año de Ingeniería en
         Informática, a lo largo de mis años en la carrera he estudiado
-        desarrollo web de forma autodidacta (y sigo haciéndolo), lo que me ha
-        llevado a sentirme cómodo trabajando con{" "}
+        desarrollo web de manera autodidacta (y sigo haciéndolo), desarrollando
+        varios proyectos con{" "}
         <TechnologyLink href="https://www.typescriptlang.org/">
           TypeScript
         </TechnologyLink>
-        ,{" "}
-        <TechnologyLink href="https://nextjs.org/">
-          React (Next.js)
-        </TechnologyLink>{" "}
+        , <TechnologyLink href="https://es.reactjs.org/">React</TechnologyLink>{" "}
         y <TechnologyLink href="https://nodejs.org/es/">Node.js</TechnologyLink>
-        . Me considero bueno resolviendo problemas, y me divierto mucho
-        desarrollando, sobretodo cuando aprendo cosas nuevas :).
+        .
       </Text>
     </>
   );
