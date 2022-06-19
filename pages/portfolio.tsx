@@ -81,43 +81,41 @@ const ProjectLink = ({
 
 const Portfolio: NextPage = () => {
   return (
-    <Box pt={8}>
-      <SlideFade in>
-        <SimpleGrid gap={10} columns={{ base: 1, md: 2 }}>
-          {projects.map((project, i) => (
-            <Project
-              key={project.githubUrl}
-              githubUrl={project.githubUrl}
-              image={project.image}
-              pageUrl={project.pageUrl}
-              iconColor={project.iconColor}
-              margin={i % 2 !== 0}
-            >
-              <Text mt={2} fontSize={"xl"}>
-                {project.title}
-              </Text>
-              <Text fontSize={"sm"}>{project.description}</Text>
-              <HStack mt={2}>
+    <SlideFade in>
+      <SimpleGrid gap={10} columns={{ base: 1, md: 2 }}>
+        {projects.map((project, i) => (
+          <Project
+            key={project.githubUrl}
+            githubUrl={project.githubUrl}
+            image={project.image}
+            pageUrl={project.pageUrl}
+            iconColor={project.iconColor}
+            margin={i % 2 !== 0}
+          >
+            <Text mt={2} fontSize={"xl"}>
+              {project.title}
+            </Text>
+            <Text fontSize={"sm"}>{project.description}</Text>
+            <HStack mt={2}>
+              <ProjectLink
+                icon={<AiFillGithub size={20} />}
+                href={project.githubUrl}
+              >
+                Código
+              </ProjectLink>
+              {project.pageUrl && (
                 <ProjectLink
-                  icon={<AiFillGithub size={20} />}
-                  href={project.githubUrl}
+                  icon={<BiLinkExternal size={20} />}
+                  href={project.pageUrl}
                 >
-                  Código
+                  Deploy
                 </ProjectLink>
-                {project.pageUrl && (
-                  <ProjectLink
-                    icon={<BiLinkExternal size={20} />}
-                    href={project.pageUrl}
-                  >
-                    Deploy
-                  </ProjectLink>
-                )}
-              </HStack>
-            </Project>
-          ))}
-        </SimpleGrid>
-      </SlideFade>
-    </Box>
+              )}
+            </HStack>
+          </Project>
+        ))}
+      </SimpleGrid>
+    </SlideFade>
   );
 };
 

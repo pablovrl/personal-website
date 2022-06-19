@@ -9,15 +9,13 @@ import Skills from "../components/Skills";
 
 const Home: NextPage = () => {
   return (
-    <Box pt={8}>
-      <SlideFade in>
-        <About />
-        <Skills />
-        <Experience />
-        <Education />
-        <Lenguages />
-      </SlideFade>
-    </Box>
+    <SlideFade in>
+      <About />
+      <Skills />
+      <Experience />
+      <Education />
+      <Lenguages />
+    </SlideFade>
   );
 };
 

@@ -22,7 +22,7 @@ const Main = ({ children }: { children: React.ReactElement }) => {
         />
       </Head>
       <Navbar />
-      <Container maxW={"container.md"} pt={14}>
+      <Container maxW={"container.md"} pt={"20"}>
         {children}
       </Container>
     </Box>
