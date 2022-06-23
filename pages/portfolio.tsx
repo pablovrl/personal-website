@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   HStack,
   Link,
@@ -11,52 +10,7 @@ import { NextPage } from "next";
 import Project from "../components/Project";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
-
-interface Project {
-  image: string;
-  pageUrl?: string;
-  githubUrl: string;
-  title?: string;
-  description?: string;
-  iconColor: "white" | "black";
-}
-
-const projects: Project[] = [
-  {
-    image: "/pokeapi-card.png",
-    iconColor: "black",
-    pageUrl: "https://pokemon-card-ten.vercel.app/",
-    githubUrl: "https://github.com/pablovrl/pokemon-card",
-    title: "Pokemon Card",
-    description:
-      "Página web para ver la información de un Pokémon, utilizando la API de PokeAPI.",
-  },
-  {
-    image: "/prueba-docmovi.png",
-    iconColor: "black",
-    githubUrl: "https://github.com/pablovrl/prueba-docmovi",
-    title: "Prueba Técnica Docmovi",
-    description: "Prueba técnica para la empresa Docmovi.",
-  },
-  {
-    image: "/calculador-promedio.png",
-    iconColor: "black",
-    pageUrl: "https://calculador-promedio-theta.vercel.app/",
-    githubUrl: "https://github.com/pablovrl/calculador-promedio",
-    title: "Calculador Promedio",
-    description:
-      "Una simple aplicación web que calcula el promedio de tus notas.",
-  },
-  {
-    image: "/personal-website.png",
-    iconColor: "white",
-    pageUrl: "http://pablovillarroel.xyz",
-    githubUrl: "https://github.com/pablovrl/personal-website",
-    title: "Página Personal",
-    description:
-      "Página web personal, en la que encontrarás mi experiencia profesional y proyectos personales.",
-  },
-];
+import { projects } from "../utils/data";
 
 const ProjectLink = ({
   href,
@@ -91,6 +45,7 @@ const Portfolio: NextPage = () => {
             pageUrl={project.pageUrl}
             iconColor={project.iconColor}
             margin={i % 2 !== 0}
+            deployLink={project.pageUrl}
           >
             <Text mt={2} fontSize={"xl"}>
               {project.title}
@@ -101,7 +56,7 @@ const Portfolio: NextPage = () => {
                 icon={<AiFillGithub size={20} />}
                 href={project.githubUrl}
               >
-                Código
+                Repositorio
               </ProjectLink>
               {project.pageUrl && (
                 <ProjectLink

@@ -8,44 +8,7 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 import SubTitle from "./SubTitle";
-
-interface Job {
-  company: string;
-  date: string;
-  position: string;
-  description: string;
-  technologies: string[];
-}
-
-const jobs: Job[] = [
-  {
-    company: "Docmovi",
-    date: "Ene 2022 - Mar 2022",
-    position: "Desarrollador Full-Stack",
-    description:
-      "Segunda práctica profesional (jornada laboral completa), participé en el desarrollo de una página web para contratación de planes, incluyendo apartado de administrador para ver pagos y cambiar precios de planes, en la cual creé componentes responsivos basándome en un diseño de Figma, también colaboré con el desarrollo de una API REST creando endpoints para la autentificación de usuarios, recuperación de contraseñas y CRUDs de tablas.",
-    technologies: [
-      "TypeScript",
-      "Next.js",
-      "Loopback 4",
-      "PostgreSQL",
-      "TDD",
-      "Jest",
-      "Cypress",
-      "SCRUM",
-      "Jira",
-      "Transbank SDK",
-    ],
-  },
-  {
-    company: "Pryx",
-    date: "Mar 2021 - Jun 2021",
-    position: "Desarrollador Back-End",
-    description:
-      "Primera práctica profesional, desarrollé una API REST para una plataforma de IoT.",
-    technologies: ["Django", "Django REST framework", "PostgreSQL"],
-  },
-];
+import { Job, jobs } from "../utils/data";
 
 const JobExperience = ({
   company,
