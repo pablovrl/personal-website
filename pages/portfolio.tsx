@@ -23,15 +23,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    image: "/personal-website.png",
-    iconColor: "white",
-    pageUrl: "http://pablovillarroel.xyz",
-    githubUrl: "https://github.com/pablovrl/personal-website",
-    title: "Página Personal",
-    description:
-      "Página web personal, en la que encontrarás mi experiencia profesional y proyectos personales.",
-  },
-  {
     image: "/pokeapi-card.png",
     iconColor: "black",
     pageUrl: "https://pokemon-card-ten.vercel.app/",
@@ -39,6 +30,13 @@ const projects: Project[] = [
     title: "Pokemon Card",
     description:
       "Página web para ver la información de un Pokémon, utilizando la API de PokeAPI.",
+  },
+  {
+    image: "/prueba-docmovi.png",
+    iconColor: "black",
+    githubUrl: "https://github.com/pablovrl/prueba-docmovi",
+    title: "Prueba Técnica Docmovi",
+    description: "Prueba técnica para la empresa Docmovi.",
   },
   {
     image: "/calculador-promedio.png",
@@ -50,11 +48,13 @@ const projects: Project[] = [
       "Una simple aplicación web que calcula el promedio de tus notas.",
   },
   {
-    image: "/prueba-docmovi.png",
-    iconColor: "black",
-    githubUrl: "https://github.com/pablovrl/prueba-docmovi",
-    title: "Prueba Técnica Docmovi",
-    description: "Prueba técnica para la empresa Docmovi.",
+    image: "/personal-website.png",
+    iconColor: "white",
+    pageUrl: "http://pablovillarroel.xyz",
+    githubUrl: "https://github.com/pablovrl/personal-website",
+    title: "Página Personal",
+    description:
+      "Página web personal, en la que encontrarás mi experiencia profesional y proyectos personales.",
   },
 ];
 
