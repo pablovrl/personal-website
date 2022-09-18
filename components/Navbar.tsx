@@ -11,23 +11,39 @@ import {
   IconButton,
   HStack,
   Switch,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
+  path: string;
 }
 
-const NavLink = ({ href, children }: NavLinkProps) => (
-  <NextLink href={href}>
-    <Link>{children}</Link>
-  </NextLink>
-);
+const NavLink = ({ href, children, path }: NavLinkProps) => {
+  const active = path === href;
+  return (
+    <NextLink href={href}>
+      <Link
+        bgColor={{ md: active ? "pink.100" : undefined }}
+        color={{ md: active ? "black" : undefined }}
+        borderRadius={{ md: "2xl" }}
+        px={{ md: 4 }}
+        py={{ md: 1 }}
+      >
+        {children}
+      </Link>
+    </NextLink>
+  );
+};
 
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const router = useRouter();
+
   return (
     <Box
       bg={useColorModeValue("#FFF6EA", "#513E51")}
@@ -57,8 +73,12 @@ export default function Navbar() {
             </NextLink>
             <Box display={{ base: "none", md: "inline" }}>
               <HStack spacing={4}>
-                <NavLink href={"/"}>Sobre mi</NavLink>
-                <NavLink href={"/portfolio"}>Portafolio</NavLink>
+                <NavLink href={"/"} path={router.asPath}>
+                  Sobre mi
+                </NavLink>
+                <NavLink href={"/portfolio"} path={router.asPath}>
+                  Portafolio
+                </NavLink>
               </HStack>
             </Box>
           </HStack>
@@ -78,10 +98,10 @@ export default function Navbar() {
             <Menu isLazy>
               <MenuButton as={IconButton} icon={<HamburgerIcon />} />
               <MenuList>
-                <NavLink href={"/"}>
+                <NavLink href={"/"} path={router.asPath}>
                   <MenuItem>Sobre mi</MenuItem>
                 </NavLink>
-                <NavLink href={"/portfolio"}>
+                <NavLink href={"/portfolio"} path={router.asPath}>
                   <MenuItem>Portafolio</MenuItem>
                 </NavLink>
               </MenuList>
