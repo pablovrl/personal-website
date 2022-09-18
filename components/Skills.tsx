@@ -1,16 +1,24 @@
-import { Box, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import SubTitle from "./SubTitle";
 
 const ICON_SIZE = 40;
 
 interface SkillIconProps {
   icon: string;
-  size: number;
+  name: string;
 }
 
-const SkillIcon = ({ icon, size }: SkillIconProps) => (
-  <WrapItem>
-    <i className={icon} style={{ fontSize: size }} />
+const SkillIcon = ({ icon, name }: SkillIconProps) => (
+  <WrapItem
+    w={"20"}
+    display="flex"
+    flexDir={"column"}
+    alignItems="center"
+  >
+    <i className={icon} style={{ fontSize: ICON_SIZE }} />
+    <Text mt={2} mb={4} fontWeight="bold">
+      {name}
+    </Text>
   </WrapItem>
 );
 
@@ -18,17 +26,18 @@ const Skills = () => {
   return (
     <Box>
       <SubTitle>Tecnologías</SubTitle>
-      <Wrap>
-        <SkillIcon icon="devicon-typescript-plain" size={ICON_SIZE} />
-        <SkillIcon icon="devicon-react-original" size={ICON_SIZE} />
-        <SkillIcon icon="devicon-nodejs-plain" size={ICON_SIZE} />
-        <SkillIcon icon="devicon-express-original" size={ICON_SIZE} />
-        <SkillIcon icon="devicon-git-plain" size={ICON_SIZE} />
-        <SkillIcon icon="devicon-postgresql-plain" size={ICON_SIZE} />
-        <SkillIcon icon="devicon-mysql-plain" size={ICON_SIZE} />
-        <SkillIcon icon="devicon-docker-plain" size={ICON_SIZE} />
-        <SkillIcon icon="devicon-linux-plain" size={ICON_SIZE} />
-        <SkillIcon icon="devicon-jest-plain" size={ICON_SIZE} />
+      <Wrap spacing={4}>
+        <SkillIcon name="TypeScript" icon="devicon-typescript-plain" />
+        <SkillIcon name="Next.js" icon="devicon-nextjs-plain" />
+        <SkillIcon name="React" icon="devicon-react-original" />
+        <SkillIcon name="Node.js" icon="devicon-nodejs-plain" />
+        <SkillIcon name="Express.js" icon="devicon-express-original" />
+        <SkillIcon name="Git" icon="devicon-git-plain" />
+        <SkillIcon name="PostgreSQL" icon="devicon-postgresql-plain" />
+        <SkillIcon name="MySQL" icon="devicon-mysql-plain" />
+        <SkillIcon name="Docker" icon="devicon-docker-plain" />
+        <SkillIcon name="Linux" icon="devicon-linux-plain" />
+        <SkillIcon name="Jest" icon="devicon-jest-plain" />
       </Wrap>
     </Box>
   );
