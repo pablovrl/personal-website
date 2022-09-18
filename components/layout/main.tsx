@@ -16,10 +16,6 @@ const Main = ({ children }: { children: React.ReactElement }) => {
         <title>Pablo Villarroel</title>
         <link rel="icon" type="image/svg+xml" href="planet.svg" />
 
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-        />
       </Head>
       <Navbar />
       <Container maxW={"container.md"} pt={"20"}>
