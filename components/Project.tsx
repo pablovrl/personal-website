@@ -7,7 +7,6 @@ interface ProjectProps {
   githubUrl: string;
   children?: React.ReactNode;
   iconColor: "white" | "black";
-  margin: boolean;
   deployLink?: string;
 }
 
@@ -16,7 +15,7 @@ interface IconLinkProps {
   children: React.ReactNode;
 }
 
-const Project = ({ image, children, margin, deployLink }: ProjectProps) => {
+const Project = ({ image, children, deployLink }: ProjectProps) => {
   return (
     <Box>
       <Link
@@ -27,7 +26,6 @@ const Project = ({ image, children, margin, deployLink }: ProjectProps) => {
       >
         <Flex
           rounded="2xl"
-          mt={{ md: margin ? "16" : 0 }}
           backgroundColor="gray.100"
         >
           <Image

@@ -44,7 +44,6 @@ const Portfolio: NextPage = () => {
             image={project.image}
             pageUrl={project.pageUrl}
             iconColor={project.iconColor}
-            margin={i % 2 !== 0}
             deployLink={project.pageUrl}
           >
             <Text mt={2} fontSize={"xl"}>
