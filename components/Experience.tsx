@@ -6,6 +6,8 @@ import {
   Badge,
   Wrap,
   WrapItem,
+  Link,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import SubTitle from "./SubTitle";
 import { Job, jobs } from "../utils/data";
@@ -16,15 +18,23 @@ const JobExperience = ({
   position,
   description,
   technologies,
+  companyUrl,
 }: Job) => {
   return (
     <Flex flexDirection={{ base: "column", md: "row" }}>
       <Box minW="48">
-        <Text fontWeight={"bold"}>{company}</Text>
+        <Text
+          fontWeight={"bold"}
+          color={useColorModeValue("pink.500", "pink.200")}
+        >
+          <Link href={companyUrl} target="_blank">
+            {company}
+          </Link>
+        </Text>
         <Text mb={4}>{date}</Text>
       </Box>
       <Flex flexDirection={"column"} pl={{ base: "4", md: "0" }}>
-        <Text mb={2}>
+        <Text mb={2} textAlign="justify">
           <strong>{position}.</strong> <br /> {description}
         </Text>
         <Wrap>
@@ -54,6 +64,7 @@ const ExperienceSection = () => {
             position={job.position}
             description={job.description}
             technologies={job.technologies}
+            companyUrl={job.companyUrl}
           />
         ))}
       </Stack>

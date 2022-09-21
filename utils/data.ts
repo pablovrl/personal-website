@@ -13,6 +13,7 @@ export interface Job {
   position: string;
   description: string;
   technologies: string[];
+  companyUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -64,6 +65,7 @@ export const projects: Project[] = [
 export const jobs: Job[] = [
   {
     company: "Docmovi",
+    companyUrl: "https://docmovi.com/",
     date: "Ene 2022 - Mar 2022",
     position: "Desarrollador Full-Stack",
     description:
@@ -83,6 +85,7 @@ export const jobs: Job[] = [
   },
   {
     company: "Pryx",
+    companyUrl: "https://pryx.cl/",
     date: "Mar 2021 - Jun 2021",
     position: "Desarrollador Back-End",
     description:
