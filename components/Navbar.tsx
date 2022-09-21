@@ -56,7 +56,7 @@ export default function Navbar() {
       <Container
         p={2}
         display={"flex"}
-        maxW={"container.md"}
+        maxW={"container.lg"}
         justifyContent={"space-between"}
         alignItems={"center"}
       >
@@ -74,7 +74,7 @@ export default function Navbar() {
             <Box display={{ base: "none", md: "inline" }}>
               <HStack spacing={4}>
                 <NavLink href={"/"} path={router.asPath}>
-                  Sobre mi
+                  Sobre mí
                 </NavLink>
                 <NavLink href={"/portfolio"} path={router.asPath}>
                   Portafolio
