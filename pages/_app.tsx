@@ -1,12 +1,14 @@
-import "@fontsource/dm-sans";
+import "@fontsource/noto-sans";
 import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import Layout from "../components/layout/main";
 
+const FONT = "Noto sans";
 const theme = extendTheme({
   fonts: {
-    body: "DM Sans",
+    heading: FONT,
+    body: FONT,
   },
   config: {
     disableTransitionOnChange: false,
