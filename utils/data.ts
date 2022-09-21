@@ -17,6 +17,15 @@ export interface Job {
 
 export const projects: Project[] = [
   {
+    image: "/auth-app.png",
+    iconColor: "black",
+    pageUrl: "https://auth-app-orpin.vercel.app",
+    githubUrl: "https://github.com/pablovrl/auth-app",
+    title: "Auth App",
+    description:
+      "Una simple página de autenticación, creada para aprender sobre JWT y rutas protegidas.",
+  },
+  {
     image: "/pokeapi-card.png",
     iconColor: "black",
     pageUrl: "https://pokemon-card-ten.vercel.app/",
