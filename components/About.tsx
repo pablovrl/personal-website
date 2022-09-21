@@ -18,18 +18,17 @@ const AboutSection = () => {
   return (
     <>
       <Profile />
-      <SubTitle>Sobre mi</SubTitle>
-      <Text>
-        Hola!, actualmente soy estudiante de último año de Ingeniería en
-        Informática, a lo largo de mis años en la carrera he estudiado
-        desarrollo web de manera autodidacta (y sigo haciéndolo), desarrollando
-        varios proyectos con{" "}
-        <TechnologyLink href="https://www.typescriptlang.org/">
-          TypeScript
-        </TechnologyLink>
-        , <TechnologyLink href="https://es.reactjs.org/">React</TechnologyLink>{" "}
-        y <TechnologyLink href="https://nodejs.org/es/">Node.js</TechnologyLink>
-        .
+      <SubTitle>Sobre mí</SubTitle>
+      <Text textAlign={"justify"}>
+        Actualmente soy estudiante de último semestre de Ingeniería Informática
+        (Alumno Tesista), conocí la programación al entrar en la carrera, y
+        desde ese entonces no he dejado de estudiarla. A lo largo de los años en
+        la carrera, me he dedicado a aprender desarrollo web (de forma
+        autodidacta). Me considero una persona apasionada por lo que hace, me
+        gusta mucho la programación y la tecnología, es por esto que gran parte
+        de mi tiempo libre lo dedico a aprender sobre las novedades del mundo
+        del desarrollo, y también a crear distintos proyectos, ya que para mí es
+        la forma más eficaz de aprender.
       </Text>
     </>
   );
