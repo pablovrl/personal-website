@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     image: "/auth-app.png",
     iconColor: "black",
-    pageUrl: "https://auth-app-orpin.vercel.app",
+    pageUrl: "https://auth-app-fmq8.onrender.com",
     githubUrl: "https://github.com/pablovrl/auth-app",
     title: "Auth App",
     description:
