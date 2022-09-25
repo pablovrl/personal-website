@@ -11,7 +11,6 @@ import {
   IconButton,
   HStack,
   Switch,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
@@ -33,6 +32,7 @@ const NavLink = ({ href, children, path }: NavLinkProps) => {
         borderRadius={{ md: "2xl" }}
         px={{ md: 4 }}
         py={{ md: 1 }}
+        _hover={{ bgColor: "pink.100", color: "black" }}
       >
         {children}
       </Link>
