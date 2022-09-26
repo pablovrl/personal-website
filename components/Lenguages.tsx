@@ -1,7 +1,14 @@
-import { Box, Link, ListItem, UnorderedList } from "@chakra-ui/react";
+import {
+  Box,
+  Link,
+  ListItem,
+  UnorderedList,
+  useColorMode,
+} from "@chakra-ui/react";
 import SubTitle from "./SubTitle";
 
 const LenguagesSection = () => {
+  const { colorMode } = useColorMode();
   return (
     <Box>
       <SubTitle>Idiomas</SubTitle>
@@ -11,7 +18,7 @@ const LenguagesSection = () => {
           Inglés{" "}
           <Link
             href="linguaskill-test-report-pablovillarroel.pdf"
-            color={"brand.primary"}
+            color={`${colorMode}.primary.500`}
             isExternal
           >
             (Linguaskill B2).
