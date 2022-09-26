@@ -51,15 +51,6 @@ export const projects: Project[] = [
     description:
       "Una simple aplicación web que calcula el promedio de tus notas.",
   },
-  {
-    image: "/personal-website.png",
-    iconColor: "white",
-    pageUrl: "http://pablovillarroel.xyz",
-    githubUrl: "https://github.com/pablovrl/personal-website",
-    title: "Página Personal",
-    description:
-      "Página web personal, en la que encontrarás mi experiencia profesional y proyectos personales.",
-  },
 ];
 
 export const jobs: Job[] = [
