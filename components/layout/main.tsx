@@ -1,24 +1,24 @@
 import { Box, Container } from "@chakra-ui/react";
 import Head from "next/head";
 import Navbar from "../Navbar";
-import { useColorModeValue } from "@chakra-ui/react";
+import { useColorMode} from "@chakra-ui/react";
 
 const Main = ({ children }: { children: React.ReactElement }) => {
+  const {colorMode} = useColorMode();
   return (
     <Box
       as="main"
       pb="8"
-      bg={useColorModeValue("#F7E9D7", "#202023")}
-      style={{ minHeight: "100vh" }}
-      transition="background 0.2s ease-in-out"
+      bg={`${colorMode}.background`}
+      transition="background 0.2s ea
+     se-in-out"
     >
       <Head>
         <title>Pablo Villarroel</title>
         <link rel="icon" type="image/svg+xml" href="planet.svg" />
-
       </Head>
       <Navbar />
-      <Container maxW={"container.md"} pt={"20"}>
+      <Container maxW={"container.md"} >
         {children}
       </Container>
     </Box>

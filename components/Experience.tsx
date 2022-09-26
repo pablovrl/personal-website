@@ -7,7 +7,7 @@ import {
   Wrap,
   WrapItem,
   Link,
-  useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import SubTitle from "./SubTitle";
 import { Job, jobs } from "../utils/data";
@@ -20,13 +20,11 @@ const JobExperience = ({
   technologies,
   companyUrl,
 }: Job) => {
+  const { colorMode } = useColorMode();
   return (
     <Flex flexDirection={{ base: "column", md: "row" }}>
       <Box minW="48">
-        <Text
-          fontWeight={"bold"}
-          color={useColorModeValue("pink.500", "pink.200")}
-        >
+        <Text fontWeight={"bold"} color={`${colorMode}.primary.500`}>
           <Link href={companyUrl} target="_blank">
             {company}
           </Link>
@@ -40,7 +38,7 @@ const JobExperience = ({
         <Wrap>
           {technologies.map((tec, i) => (
             <WrapItem key={i}>
-              <Badge colorScheme={"pink"} variant="solid">
+              <Badge px={2} bgColor={`${colorMode}.primary.500`} variant="solid">
                 {tec}
               </Badge>
             </WrapItem>

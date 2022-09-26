@@ -1,18 +1,6 @@
-import { Flex, Link, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import Profile from "./Profile";
 import SubTitle from "./SubTitle";
-
-const TechnologyLink = ({
-  children,
-  href,
-}: {
-  children: React.ReactNode;
-  href: string;
-}) => (
-  <Link href={href} isExternal color={"pink.500"}>
-    {children}
-  </Link>
-);
 
 const AboutSection = () => {
   return (

@@ -6,11 +6,10 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  useColorModeValue,
   useColorMode,
   IconButton,
   HStack,
-  Switch,
+  ColorMode,
 } from "@chakra-ui/react";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
@@ -20,19 +19,20 @@ interface NavLinkProps {
   href: string;
   children: React.ReactNode;
   path: string;
+  colorMode: ColorMode;
 }
 
-const NavLink = ({ href, children, path }: NavLinkProps) => {
+const NavLink = ({ href, children, path, colorMode }: NavLinkProps) => {
   const active = path === href;
   return (
     <NextLink href={href}>
       <Link
-        bgColor={{ md: active ? "pink.100" : undefined }}
-        color={{ md: active ? "black" : undefined }}
+        bgColor={{ md: active ? `${colorMode}.primary.500` : undefined }}
+        color={{ md: active ? "white" : undefined }}
         borderRadius={{ md: "2xl" }}
         px={{ md: 4 }}
         py={{ md: 1 }}
-        _hover={{ bgColor: "pink.100", color: "black" }}
+        _hover={{ bgColor: `${colorMode}.primary.500`, color: "white" }}
       >
         {children}
       </Link>
@@ -45,18 +45,11 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <Box
-      bg={useColorModeValue("#FFF6EA", "#513E51")}
-      as="nav"
-      position={"fixed"}
-      w={"100%"}
-      zIndex={1}
-      transition="background 0.2s ease-in-out"
-    >
+    <Box bg={`${colorMode}.background`} as="nav" w={"100%"} zIndex={1}>
       <Container
-        p={2}
+        py={{ base: 4, md: 10 }}
         display={"flex"}
-        maxW={"container.lg"}
+        maxW={"container.md"}
         justifyContent={"space-between"}
         alignItems={"center"}
       >
@@ -73,10 +66,14 @@ export default function Navbar() {
             </NextLink>
             <Box display={{ base: "none", md: "inline" }}>
               <HStack spacing={4}>
-                <NavLink href={"/"} path={router.asPath}>
+                <NavLink href={"/"} path={router.asPath} colorMode={colorMode}>
                   Sobre mí
                 </NavLink>
-                <NavLink href={"/portfolio"} path={router.asPath}>
+                <NavLink
+                  href={"/portfolio"}
+                  path={router.asPath}
+                  colorMode={colorMode}
+                >
                   Portafolio
                 </NavLink>
               </HStack>
@@ -85,23 +82,26 @@ export default function Navbar() {
         </Box>
         <HStack>
           <HStack>
-            <SunIcon />
-            <Switch
-              size={"lg"}
-              colorScheme="pink"
-              onChange={toggleColorMode}
-              isChecked={colorMode === "dark" ? true : false}
+            <IconButton
+              onClick={toggleColorMode}
+              bgColor={`${colorMode}.secondary.500`}
+              _hover={{ bgColor: `${colorMode}.secondary.600` }}
+              icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+              aria-label="Change color mode"
             />
-            <MoonIcon />
           </HStack>
           <Box display={{ md: "none" }}>
             <Menu isLazy>
               <MenuButton as={IconButton} icon={<HamburgerIcon />} />
               <MenuList>
-                <NavLink href={"/"} path={router.asPath}>
+                <NavLink href={"/"} path={router.asPath} colorMode={colorMode}>
                   <MenuItem>Sobre mi</MenuItem>
                 </NavLink>
-                <NavLink href={"/portfolio"} path={router.asPath}>
+                <NavLink
+                  href={"/portfolio"}
+                  path={router.asPath}
+                  colorMode={colorMode}
+                >
                   <MenuItem>Portafolio</MenuItem>
                 </NavLink>
               </MenuList>

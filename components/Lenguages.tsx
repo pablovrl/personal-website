@@ -11,7 +11,7 @@ const LenguagesSection = () => {
           Inglés{" "}
           <Link
             href="linguaskill-test-report-pablovillarroel.pdf"
-            color={"pink.500"}
+            color={"brand.primary"}
             isExternal
           >
             (Linguaskill B2).

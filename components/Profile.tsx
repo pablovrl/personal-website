@@ -7,12 +7,14 @@ import {
   HStack,
   Button,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { DownloadIcon } from "@chakra-ui/icons";
 
 const Profile = () => {
+  const { colorMode } = useColorMode();
   const [counter, setCounter] = useState(0);
   return (
     <Flex
@@ -24,7 +26,7 @@ const Profile = () => {
         <Heading fontSize={{ base: "4xl", md: "5xl" }}>
           Pablo Villarroel
         </Heading>
-        <Text fontSize={{ base: "lg", md: "2xl" }}>
+        <Text color="brand.primary.500" fontSize={{ base: "lg", md: "2xl" }}>
           Estudiante de Ingeniería Informática
         </Text>
         <HStack py={2}>
@@ -48,7 +50,9 @@ const Profile = () => {
             <Button
               leftIcon={<DownloadIcon />}
               size={"xs"}
-              colorScheme={"pink"}
+              bgColor={`${colorMode}.primary.500`}
+              _hover={{ bgColor: `${colorMode}.primary.600` }}
+              color={"white"}
             >
               Descargar CV
             </Button>
