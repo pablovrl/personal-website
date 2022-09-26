@@ -5,6 +5,7 @@ import {
   SimpleGrid,
   SlideFade,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import { NextPage } from "next";
 import Project from "../components/Project";
@@ -20,18 +21,21 @@ const ProjectLink = ({
   href: string;
   children: React.ReactNode;
   icon: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
-}) => (
-  <Link href={href} isExternal _hover={{ textDecoration: "none" }}>
-    <Button
-      bgColor="#313134"
-      color="#EDEDEE"
-      _hover={{ backgroundColor: "#444446" }}
-      leftIcon={icon}
-    >
-      {children}
-    </Button>
-  </Link>
-);
+}) => {
+  const { colorMode } = useColorMode();
+  return (
+    <Link href={href} isExternal _hover={{ textDecoration: "none" }}>
+      <Button
+        bgColor={`${colorMode}.primary.500`}
+        color="white"
+        _hover={{ backgroundColor: `${colorMode}.primary.600` }}
+        leftIcon={icon}
+      >
+        {children}
+      </Button>
+    </Link>
+  );
+};
 
 const Portfolio: NextPage = () => {
   return (
