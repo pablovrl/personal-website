@@ -7,8 +7,8 @@ const FONT = "Noto sans";
 const theme = extendTheme({
   colors: {
     light: {
-      background: "#FAFBF5",
-      primary: { 500: "#99c221", 600: "#6e910a" },
+      background: "#ffffff",
+      primary: { 500: "#6C969D", 600: "#446065" },
       secondary: { 500: "#f2ede9", 600: "#e7e1dc" },
     },
     dark: {
