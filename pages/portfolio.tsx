@@ -50,7 +50,7 @@ const Portfolio: NextPage = () => {
             iconColor={project.iconColor}
             deployLink={project.pageUrl}
           >
-            <Text mt={2} fontSize={"xl"}>
+            <Text fontSize={"xl"}>
               {project.title}
             </Text>
             <Text fontSize={"sm"}>{project.description}</Text>
